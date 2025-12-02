@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Jugo Bar - Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
@@ -32,5 +33,73 @@
       </div>
     </div>
   </header>
+
+  <main class="container contact-page">
+    <section class="contact-info">
+      <h1>Contact Us</h1>
+      <p>At The Jugo Bar, we believe in the power of fresh, nutritious juice and are dedicated to providing a unique experience for our customers. Whether you have questions about our menu, want to learn more about our sourcing practices, or are interested in partnering with us, we’d love to hear from you. Reach out via our email or phone number, and let’s make something delicious together!</p>
+      <p><strong>Email:</strong> <a href="mailto:melonjugo@gmail.com">melonjugo@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+19804323108">(980) 432-3108</a></p>
+      <img src="https://images.squarespace-cdn.com/content/v1/67cf71a48a9c4f3de71c1341/60e6a894-8c53-47fb-8bf8-67fbc4b0f268/1C47A9E9-BEC3-40D4-B08D-1332602C1A66.jpg?format=750w" alt="">
+    </section>
+
+    <section class="contact-form">
+      <h2>Send us a message</h2>
+      <!-- Static form stub — no backend -->
+      <form onsubmit="return false;">
+        <label>
+          Name<br />
+          <input type="text" name="name" placeholder="Your name" />
+        </label><br />
+        <label>
+          Email<br />
+          <input type="email" name="email" placeholder="Your email" />
+        </label><br />
+        <label>
+          Message<br />
+          <textarea name="message" placeholder="Your message"></textarea>
+        </label><br />
+        <button class="btn" type="button">Send (stub)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© The Jugo Bar – Template</p>
+    <address>
+      <h2 class="address-heading">Location</h2>
+      <p>Greensboro 515 S Elm St</p>
+      <p>Charlotte 3205 N Davidsion St</p>
+    </address>
+    <address>
+      <h2 class="address-heading">Contact</h2>
+      <a href="mailto:melonjugo@gmail.com">melonjugo@gmail.com</a>
+      <a href="tel:+(980) 432-3108">(980) 432-3108</a>
+    </address>
+  </footer>
+
+  <!-- Optional: include cart drawer if using cart.js -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="cart-close">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn ghost">Clear</button>
+        <button id="checkout" class="btn" disabled>Checkout (stub)</button>
+      </div>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+</body>
+</html>
+
 </body>
 </html>

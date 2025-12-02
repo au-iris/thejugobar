@@ -149,16 +149,51 @@ function wireCartInteractions() {
   });
 }
 
+async function fetchProducts() {
+  fetch("products.json")
+  .then(response => response.json())
+  .then(data => {
+    renderShop(data.products)}
+  );
+}
+
+function renderShop(products) {
+  const grid = document.getElementById("product-grid");
+  if (grid) {
+    products.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.name}" class="product-img">
+        <h3>${item.name}</h3>
+        <p class="price">$${item.price.toFixed(2)}</p>
+        <button class="add-to-cart" data-id="${item.id}">
+          Add to Cart
+        </button>
+      `;
+      grid.appendChild(card);
+    });
+  }
+}
+
+function renderProductPage(productId) {
+  
+}
+
 /* Init */
 function init() {
   wireAddButtons();
   wireCartInteractions();
   renderCart();
+  fetchProducts();
+  
 
   // Accessibility: close cart on Escape
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeCart();
   });
 }
+
+
 
 document.addEventListener("DOMContentLoaded", init);

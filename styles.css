@@ -22,6 +22,20 @@ body{
   padding: 0 8px;
 }
 
+a, a:visited, a:active {
+  color: var(--accent);
+  transition: 0.3s ease;
+  text-decoration: none;
+  padding: 0;
+}
+a:hover {
+  color: #fff;
+  background-color: var(--accent-dark);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
 /* Header */
