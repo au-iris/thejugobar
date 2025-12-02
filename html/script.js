@@ -181,12 +181,12 @@ function renderProductPage(productId) {
 }
 
 /* Init */
-function init() {
+async function init() {
   wireAddButtons();
   wireCartInteractions();
   renderCart();
-  fetchProducts();
-  
+  const products = await fetchProducts();
+  if (products) renderShop(products);
 
   // Accessibility: close cart on Escape
   window.addEventListener("keydown", (e) => {
