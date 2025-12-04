@@ -21,7 +21,9 @@ function readCart() {
 function saveCart(cart) {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
-
+while (localStorage.getItem(CART_KEY) === null) {
+  saveCart({ items: {} });
+}
 /* Cart model helpers */
 function addItem(productId, meta) {
   const cart = readCart();
@@ -94,7 +96,6 @@ function renderCart() {
 
   $("#checkout").disabled = false;
 }
-
 /* Hook product add buttons */
 function wireAddButtons() {
   const addBtns = $$(".add-to-cart");
