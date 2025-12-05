@@ -41,13 +41,19 @@ a:hover, nav a:hover, a:hover h2 {
 
 /* Header */
 .site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:60; padding-top: 20px; padding-bottom: 2px; overflow-y: hidden;}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px; flex-wrap: nowrap;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height: 100px; flex-wrap: nowrap;}
 .logo img{height:180px}
 .nav a{margin:0 12px;color:var(--muted);text-decoration:none}
 .header-actions{display:flex;align-items:center; gap: 16px;}
 .cart-btn{background:none;border:1px solid transparent;padding:8px 12px;border-radius:8px;cursor:pointer}
 .cart-btn:hover{background:#f6f6f6}
 .header-icon { width:  24px;  height: 24px;}
+@media (max-width:720px) {
+  .header-inner {
+  margin: 0;
+  padding: 0;}
+  
+}
 .contact-info, .about-content { display: grid; grid-template-columns: auto auto;  }
 .contact-info *, .about-content * { grid-column: 1;}
 .contact-info h2, .about-content h2 { grid-column: 1;}
