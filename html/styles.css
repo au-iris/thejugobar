@@ -48,12 +48,7 @@ a:hover, nav a:hover, a:hover h2 {
 .cart-btn{background:none;border:1px solid transparent;padding:8px 12px;border-radius:8px;cursor:pointer}
 .cart-btn:hover{background:#f6f6f6}
 .header-icon { width:  24px;  height: 24px;}
-@media (max-width:720px) {
-  .header-inner {
-  margin: 0;
-  padding: 0;}
-  
-}
+
 .contact-info, .about-content { display: grid; grid-template-columns: auto auto;  }
 .contact-info *, .about-content * { grid-column: 1;}
 .contact-info h2, .about-content h2 { grid-column: 1;}
@@ -61,6 +56,19 @@ a:hover, nav a:hover, a:hover h2 {
   grid-column: 2;
   grid-row: 1 / 5;
   max-width: 100%;
+}
+
+@media (max-width:800px) {
+  .header-inner {
+  margin: 0;
+  padding: 0;}
+  .about-content, .contact-info {
+    grid-template-columns: 1fr;
+  }
+  .portrait {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 /* Hero */
 .hero{padding:44px 0}
@@ -134,7 +142,7 @@ footer {
   justify-content: space-between; 
   padding-bottom: 16px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   footer {
     width: 100%;
     flex-direction: column;
